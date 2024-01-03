@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Kaushan+Script&display=swap');
+
+:root {
+    --navbar-height: 50px; // Default height, replace with your default height
+  }
+
+.navbar {
+    height: var(--navbar-height);
+    // other navbar styles
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.backgroundContainer {
+    position: relative;
+    z-index: 1;
+}
+
+.backgroundImage {
+    scale: 0.8;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -120px; /* Move up */
+    left: 65px;
+    opacity: 0;
+    animation: fadeInBackground 13.5s forwards;
+}
+
+.centerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh; 
+    position: absolute;
+    z-index: 30; 
+}
+
+.backgroundCarousel {
+    position: relative;
+    height: 100;
+}
+
+.carouselOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+}
+
+.backgroundImage {
+    opacity: 0.7;
+    height: 100vh;
+    background-position: center;
+    margin-right: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card {
+    color: #000;
+    font-family: "Roboto";
+    .card-title {
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
+    .card-text {
+        // font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 1rem;
+    }
+}
+
+.cardButton {
+    background-color: transparent;
+    border: none;
+}
+
+.cardButton:hover {
+    background-color: lightgray;
+}
+
+.bigText {
+    font-size: 100px;
+    // change font color to white
+    color: rgb(255, 255, 255);
+    font-family: 'Kaushan Script';
+}
+
+.smallText {
+    font-size: 30px;
+    // change font color to white
+    line-height: 0.1;
+    color: rgb(255, 255, 255);
+    font-family: 'Have Heart One';
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.learnMoreButton {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: black;
+    width: 150px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.5s;
+    // Add drop shadow
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.learnMoreButton:hover {
+    transform: scale(1.01);
+    opacity: 0.7;
+}
+
+@keyframes fadeInBackground {
+    to {
+        opacity: 0.7;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .bigText {
+      font-size: 60px; /* Adjust font size for smaller screens */
+    }
+  
+    .smallText {
+      font-size: 20px; /* Adjust font size for smaller screens */
+    }
+  
+    .learnMoreButton {
+        scale: 0.75; /* Adjust the scaling for smaller screens */
+        width: 40%; /* Make the button full width on smaller screens */
+        font-size: 12px;
+    }
+
+    .centerContainer {
+        top: 50%; /* Adjust the vertical position on smaller screens */
+    }
+    
+      .backgroundContainer {
+        top: 50%;
+        margin-bottom: 200px;
+      }
+      
+    .backgroundImage {
+        scale: 0.6; /* Adjust the scaling for smaller screens */
+        top: 10px; /* Adjust the top position for smaller screens */
+    }
+  }
