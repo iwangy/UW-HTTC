@@ -7,9 +7,6 @@ import 'slick-carousel/slick/slick.css';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import * as carouselStyles from './carousel.module.scss'
 
-
-
-
 function Carousel() {
   useEffect(() => {
     const myNavbar = document.getElementById("myNavbar");
